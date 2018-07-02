@@ -27,9 +27,9 @@ class Ship():
         """Update the ship's position based on the movement flag. """
         # Modify ship's moving speed according to ship_speed_factor
         if self.moving_right and self.rect.right < self.screen_rect.right:
-            self.rect.centerx += self.ai_settings.ship_speed_factor
+            self.center += self.ai_settings.ship_speed_factor
         if self.moving_left and self.rect.left > 0:
-            self.rect.centerx -= self.ai_settings.ship_speed_factor
+            self.center -= self.ai_settings.ship_speed_factor
 
         # Update rect object from self.center.
         self.rect.centerx = self.center
